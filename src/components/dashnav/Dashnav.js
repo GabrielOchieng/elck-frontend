@@ -23,7 +23,7 @@ const Dashnav = () => {
 				navigate("/signin");
 			}
 			const { data } = await axios.post(
-				"http://localhost:4000/users",
+				"https://elck-cdc-api.onrender.com/users",
 				// .
 				{},
 				{ withCredentials: true }

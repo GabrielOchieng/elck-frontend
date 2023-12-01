@@ -37,7 +37,7 @@ const Signin = () => {
 		try {
 			const { data } = await axios.post(
 				// "http://localhost:4000/users/login",
-				"https://elck-cdc-api.onrender.com/",
+				"https://elck-cdc-api.onrender.com/users/login",
 				{
 					...inputValue,
 				},
