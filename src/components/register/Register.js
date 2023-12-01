@@ -39,7 +39,7 @@ const Register = () => {
 		e.preventDefault();
 		try {
 			const { data } = await axios.post(
-				"https://elck-cdc-website-backend.vercel.app/users/signup",
+				"https://elck-cdc-api.onrender.com/users/signup",
 				{
 					...inputValue,
 				},
