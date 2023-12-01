@@ -1,0 +1,85 @@
+.createformCont {
+	background-color: gray;
+	width: 50%;
+	margin: 10px auto;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.createformTitle {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.createForm {
+	display: flex;
+	gap: 20px;
+}
+
+.createformItem {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.createformItem input {
+	width: 400px;
+	height: 40px;
+}
+
+.createBtn {
+	background-color: greenyellow;
+	border: none;
+	padding: 10px;
+	width: 300px;
+	border-radius: 5px;
+	margin: 0 auto;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 768px) {
+	.createformTitle {
+		margin-bottom: 10px;
+	}
+
+	.createForm {
+		gap: 15px;
+	}
+	.createformCont {
+		width: 80%;
+	}
+	.createformItem {
+		display: flex;
+		justify-content: space-between;
+	}
+	.createformItem input {
+		width: 350px;
+		height: 35px;
+	}
+
+	.createBtn {
+		padding: 5px;
+		width: 250px;
+	}
+}
+@media (max-width: 480px) {
+	.createformCont {
+		width: 90%;
+	}
+	.createformItem {
+		display: flex;
+		justify-content: space-between;
+	}
+	.createformItem input {
+		width: 250px;
+		height: 35px;
+	}
+
+	.createBtn {
+		padding: 5px;
+		width: 250px;
+	}
+}

@@ -1,0 +1,81 @@
+.aboutwords {
+	text-align: center;
+	background-color: white;
+	margin: 100px 0;
+}
+
+.aboutwords h3 {
+	margin: 10px;
+	font-size: 30px;
+}
+
+.aboutwords p {
+	line-height: 25px;
+	font-size: 18px;
+	margin: 10px;
+}
+
+.aboutwords button {
+	background-color: brown;
+	padding: 10px;
+	border: 2px solid salmon;
+	border-radius: 5px;
+	color: white;
+	font-size: 20px;
+	margin-top: 10px;
+}
+@media (max-width: 768px) {
+	.aboutwords {
+		/* text-align: center; */
+		background-color: white;
+		margin: 30px 0;
+	}
+
+	.aboutwords h3 {
+		margin: 10px 0;
+		font-size: 20px;
+	}
+
+	.aboutwords p {
+		font-size: 20px;
+		margin: 10px 0;
+	}
+
+	.aboutwords button {
+		background-color: brown;
+		padding: 5px;
+		border: 1px solid salmon;
+		border-radius: 5px;
+		color: white;
+		font-size: 16px;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 480px) {
+	.aboutwords {
+		/* text-align: center; */
+		background-color: white;
+		margin: 30px 0;
+	}
+
+	.aboutwords h3 {
+		margin: 10px 0;
+		font-size: 20px;
+	}
+
+	.aboutwords p {
+		font-size: 14px;
+		margin: 10px 0;
+	}
+
+	.aboutwords button {
+		background-color: brown;
+		padding: 5px;
+		border: 1px solid salmon;
+		border-radius: 5px;
+		color: white;
+		font-size: 16px;
+		margin-top: 10px;
+	}
+}

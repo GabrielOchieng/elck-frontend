@@ -1,0 +1,39 @@
+.containerHed {
+	background-color: brown;
+	position: relative;
+}
+
+.headerimg {
+	padding: 0;
+	width: 100%;
+	object-fit: cover;
+	overflow: hidden;
+}
+.headertext {
+	position: absolute;
+	background-color: white;
+	padding: 10px;
+	bottom: 55px;
+	left: 250px;
+	width: 60%;
+	color: maroon;
+	font-size: 25px;
+	font-weight: 700;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 768px) {
+	.headertext {
+		left: 100px;
+	}
+}
+@media (max-width: 480px) {
+	.headertext {
+		position: absolute;
+		left: 5px;
+		width: 75%;
+		bottom: 10px;
+		font-size: 14px;
+	}
+}

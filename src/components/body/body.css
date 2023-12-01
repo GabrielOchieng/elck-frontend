@@ -1,0 +1,57 @@
+.containerdom {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.domtitle {
+	text-align: center;
+	text-decoration: underline;
+	text-decoration-color: brown;
+}
+.domtexts {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.domeach {
+	font-size: 18px;
+	width: 31%;
+	height: 200px;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid brown;
+	border-radius: 20px;
+	z-index: 5;
+	text-align: center;
+}
+
+.domeach h3 {
+	margin-bottom: 10px;
+	text-decoration: underline;
+	text-decoration-color: brown;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 768px) {
+	.domeach {
+		width: 45%;
+		height: 250px;
+	}
+}
+@media (max-width: 480px) {
+	.domtexts {
+		display: flex;
+		flex-direction: column;
+	}
+	.domeach {
+		width: 95%;
+		height: auto;
+		font-size: 16px;
+		padding-bottom: 5px;
+		margin-bottom: 10px;
+	}
+}

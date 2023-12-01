@@ -1,0 +1,32 @@
+.aboutlast {
+	font-size: 20px;
+	padding: 100px 30px;
+	text-align: center;
+	color: white;
+}
+
+.aboutlast p {
+	width: 700px;
+	margin: 20px auto;
+	line-height: 30px;
+}
+
+@media (max-width: 768px) {
+	.headertext {
+		left: 100px;
+	}
+}
+@media (max-width: 480px) {
+	.aboutlast {
+		font-size: 16px;
+		padding: 20px;
+		text-align: center;
+		color: white;
+	}
+
+	.aboutlast p {
+		width: 100%;
+		margin: 20px 0;
+		line-height: 16px;
+	}
+}

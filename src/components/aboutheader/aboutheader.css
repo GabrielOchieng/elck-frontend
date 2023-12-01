@@ -1,0 +1,46 @@
+.header img {
+	height: 400px;
+	width: 100%;
+	position: relative;
+	/* object-fit: cover; */
+}
+
+.header h1 {
+	position: absolute;
+	top: 300px;
+	left: 250px;
+	color: white;
+	font-size: 50px;
+}
+
+@media (max-width: 768px) {
+	.header img {
+		height: 300px;
+		width: 100%;
+		position: relative;
+		/* object-fit: cover; */
+	}
+	.header h1 {
+		position: absolute;
+		bottom: 0px;
+		left: 10px;
+		color: white;
+		font-size: 40px;
+	}
+}
+@media (max-width: 480px) {
+	.header img {
+		height: 250px;
+		width: 100%;
+		position: relative;
+		/* object-fit: cover; */
+	}
+
+	.header h1 {
+		position: absolute;
+		top: 240px;
+		left: 50px;
+		color: white;
+		font-size: 40px;
+	}
+}

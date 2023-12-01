@@ -1,0 +1,124 @@
+.mainP {
+	margin: 10px 0;
+}
+
+.search {
+	margin: 10px auto;
+	width: 90%;
+}
+.searchbar {
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	font-size: 16px;
+}
+.titleP {
+	text-align: center;
+	text-decoration: underline;
+	font-size: 20px;
+}
+
+.new a {
+	text-decoration: none;
+	margin: 10px;
+	background-color: greenyellow;
+	font-weight: bold;
+	padding: 5px;
+}
+/* .items {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px auto;
+} */
+
+.item {
+	background-color: aquamarine;
+	margin: 10px auto;
+	width: 700px;
+	border-radius: 5px;
+	padding: 5px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+	flex: 3 1fr;
+}
+
+.item img {
+	width: 80px;
+	height: 80px;
+	border-radius: 5px;
+}
+
+.details span {
+	font-weight: bold;
+}
+.profile {
+	font-weight: bold;
+}
+.subItem {
+	display: flex;
+	width: 30%;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.btns {
+	display: flex;
+	align-items: end;
+	justify-content: end;
+	gap: 10px;
+}
+
+.btns a {
+	text-decoration: none;
+	background-color: green;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+	width: 126px;
+}
+
+.deletebtn {
+	background-color: maroon;
+	border: none;
+	padding: 5px 10px;
+	color: white;
+	border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+	.item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 10px;
+		width: 80%;
+	}
+	.subItem {
+		width: 100%;
+	}
+	.btns {
+		display: flex;
+		flex-direction: row;
+
+		justify-content: space-between;
+	}
+}
+@media (max-width: 480px) {
+	.item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 10px;
+		width: 95%;
+	}
+	.subItem {
+		width: 100%;
+	}
+	.btns {
+		display: flex;
+		flex-direction: row;
+
+		justify-content: space-between;
+	}
+}

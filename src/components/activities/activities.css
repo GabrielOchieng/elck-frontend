@@ -1,0 +1,50 @@
+.activitieshead {
+	margin: 10px 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+
+.activitieshead a {
+	margin: 0 40px;
+	text-decoration: none;
+	font-size: 20px;
+	color: brown;
+}
+
+.activitiesdesc img {
+	display: block;
+	width: 80%;
+	object-fit: cover;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.activitiesdesc p {
+	width: 80%;
+	font-size: 20px;
+	display: block;
+	margin: auto;
+	font-weight: 300;
+	color: gray;
+}
+
+@media (max-width: 480px) {
+	.activitieshead a {
+		font-size: 16px;
+		margin: 0 15px;
+	}
+	.activitiesdesc img {
+		width: 95%;
+	}
+
+	.activitiesdesc p {
+		width: 85%;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+}
