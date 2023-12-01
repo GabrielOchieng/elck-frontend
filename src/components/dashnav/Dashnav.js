@@ -33,7 +33,7 @@ const Dashnav = () => {
 
 			return status
 				? toast({ position: "top-right" })
-				: (removeCookie("token"), navigate("/signin"));
+				: (removeCookie("token"), navigate("/dashboard"));
 		};
 		verifyCookie();
 	}, [cookies, navigate, removeCookie]);
