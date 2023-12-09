@@ -70,7 +70,7 @@
 		position: absolute;
 		bottom: 20px;
 		background-color: white;
-		height: 300px;
+		height: auto;
 		font-size: 14px;
 		margin: 0 auto;
 		width: 90%;
