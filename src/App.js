@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Dashboard from "./pages/dashboard/Dashboard";
-import Donate from "./pages/donate/Donate";
 import SigninPage from "./pages/signinpage/SigninPage";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
@@ -15,6 +14,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { getParticipant } from "./redux/ParticipantSlice";
 import EditParticipant from "./pages/edit/EditParticipant";
+import DonatePage from "./pages/donate/DonatePage";
 
 function App() {
 	return (
@@ -23,9 +23,8 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/about" element={<About />} />
-
 				<Route path="/dashboard" element={<Dashboard />} />
-				<Route path="/donate" element={<Donate />} />
+				<Route path="/donate" element={<DonatePage />} />
 				<Route path="/signin" element={<SigninPage />} />
 				<Route path="/register" element={<RegisterPage />} />
 				<Route path="/participants" element={<ParticipantsPage />} />

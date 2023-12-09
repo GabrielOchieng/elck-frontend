@@ -17,7 +17,7 @@ const Participants = () => {
 
 	const handleDelete = (id) => {
 		axios
-			.delete("https://elck-cdc-website-backend.vercel.app/participants/" + id)
+			.delete("https://elck-cdc-api.onrender.com/participants/" + id)
 			.then((res) => {
 				dispatch(deleteParticipant({ id }));
 				console.log(res);
@@ -29,10 +29,9 @@ const Participants = () => {
 		const fetchParticipants = async () => {
 			try {
 				const response = await axios.get(
-					"http://localhost:4000/participants"
-					// "https://elck-cdc-website-backend.vercel.app/participants"
+					// "http://localhost:4000/participants"
+					"https://elck-cdc-api.onrender.com/participants"
 				);
-				// console.log(response.data);
 
 				dispatch(getParticipant(response.data));
 			} catch (err) {
