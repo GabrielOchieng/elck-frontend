@@ -67,9 +67,7 @@ const Navbar = () => {
 										</li>
 
 										<li className="navseg">
-											<Link to="https://elck-cdc.onrender.com/donate">
-												Donate
-											</Link>
+											<Link to="/donate">Donate</Link>
 										</li>
 										<li className="navseg">
 											<Link to="/signin">Dashboard</Link>
