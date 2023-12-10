@@ -10,7 +10,6 @@ import { Link } from "react-router-dom";
 
 const Participants = () => {
 	const [search, setSearch] = useState("");
-	console.log(search);
 
 	const dispatch = useDispatch();
 	const participants = useSelector((state) => state.participants.participants);

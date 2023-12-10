@@ -24,16 +24,18 @@ const Dashnav = () => {
 			}
 			const { data } = await axios.post(
 				"https://elck-cdc-api.onrender.com/users",
-				// .
 				{},
 				{ withCredentials: true }
 			);
 			const { status, user } = data;
 			setUsername(user);
 
-			return status
-				? toast({ position: "top-right" })
-				: (removeCookie("token"), navigate("/dashboard"));
+			return status;
+
+			//NAVIGATION NOT WORKING WELL ON SIGN IN
+			// 	return status
+			// 		? toast({ position: "top-right" })
+			// 		: (removeCookie("token"), navigate("/dahsboard"));
 		};
 		verifyCookie();
 	}, [cookies, navigate, removeCookie]);
