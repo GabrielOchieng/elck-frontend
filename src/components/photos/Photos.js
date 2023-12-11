@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { addPhoto } from "../../redux/PhotosSlice";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./photos.css";
