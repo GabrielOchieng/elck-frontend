@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./activities.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Activities = () => {
+	useEffect(() => {
+		AOS.init({ duration: 2000 });
+	});
+
 	return (
 		<div className="activities">
 			<div className="activitieshead">
@@ -9,7 +15,7 @@ const Activities = () => {
 				<a href="/">Partners</a>
 				<a href="/">Our Impact</a>
 			</div>
-			<div className="activitiesdesc">
+			<div className="activitiesdesc" data-aos="fade-up">
 				<img src="/images/Outdoor.jpeg" alt="" />
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur

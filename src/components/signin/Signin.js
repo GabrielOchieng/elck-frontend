@@ -49,7 +49,7 @@ const Signin = () => {
 				handleSuccess(message);
 				setTimeout(() => {
 					navigate("/dashboard");
-				}, 2000);
+				}, 1000);
 			} else {
 				handleError(message);
 			}

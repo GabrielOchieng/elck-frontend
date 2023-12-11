@@ -15,6 +15,7 @@ import { useDispatch } from "react-redux";
 import { getParticipant } from "./redux/ParticipantSlice";
 import EditParticipant from "./pages/edit/EditParticipant";
 import DonatePage from "./pages/donate/DonatePage";
+import PhotosPage from "./pages/photosPage/PhotosPage";
 
 function App() {
 	return (
@@ -30,6 +31,7 @@ function App() {
 				<Route path="/participants" element={<ParticipantsPage />} />
 				<Route path="/createParticipant" element={<Create />} />
 				<Route path="/editParticipant/:id" element={<EditParticipant />} />
+				<Route path="/photos" element={<PhotosPage />} />
 			</Routes>
 			<Footer />
 		</>

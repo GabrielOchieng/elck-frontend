@@ -30,12 +30,11 @@ const Dashnav = () => {
 			const { status, user } = data;
 			setUsername(user);
 
-			return status;
-
-			//NAVIGATION NOT WORKING WELL ON SIGN IN
-			// 	return status
-			// 		? toast({ position: "top-right" })
-			// 		: (removeCookie("token"), navigate("/dahsboard"));
+			return status
+				? //NAVIGATION NOT WORKING WELL ON SIGN IN
+				  // 	return status
+				  toast({ position: "top-right" })
+				: (removeCookie("token"), navigate("/dashboard"));
 		};
 		verifyCookie();
 	}, [cookies, navigate, removeCookie]);
@@ -65,7 +64,7 @@ const Dashnav = () => {
 					</li>
 
 					<li className="navsegdash">
-						<Link to={"/"}>PHOTOS</Link>
+						<Link to={"/photos"}>PHOTOS</Link>
 					</li>
 				</ul>
 			</div>
@@ -99,7 +98,7 @@ const Dashnav = () => {
 									</li>
 
 									<li className="navsegdash">
-										<Link to={"/"}>PHOTOS</Link>
+										<Link to={"/photos"}>PHOTOS</Link>
 									</li>
 								</ul>
 							</div>

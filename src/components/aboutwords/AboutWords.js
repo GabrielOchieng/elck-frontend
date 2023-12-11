@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./aboutwords.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutWords = () => {
+	useEffect(() => {
+		AOS.init({ duration: 2000 });
+	}, []);
 	return (
-		<div className="aboutwords">
+		<div className="aboutwords" data-aos="fade-up">
 			<h3>
 				CHILD PROTECTION FORMS <br />
 				THE CORE PART OF OUR WORK

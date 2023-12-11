@@ -1,21 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./body.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Body = () => {
+	useEffect(() => {
+		AOS.init({ duration: 2000 });
+	}, []);
+
 	return (
 		<div className="containerdom">
 			<div className="domtitle">
 				<h1>DOMAINS</h1>
 			</div>
 			<div className="domtexts">
-				<div className="domeach">
+				<div className="domeach" data-aos="fade-up">
 					<h3>Physical Domain</h3>
 					<p>
 						Physical development – building gross motor and fine motor skills,
 						sensory development and having physical needs met
 					</p>
 				</div>
-				<div className="domeach">
+				<div className="domeach" data-aos="fade-up">
 					<h3>Cognitive Domain</h3>
 					<p>
 						Mental (cognitive) development – developing intellectually, learning
@@ -23,7 +29,7 @@ const Body = () => {
 						matching, and developing critical thinking skills.
 					</p>
 				</div>
-				<div className="domeach">
+				<div className="domeach" data-aos="fade-up">
 					<h3>Spiritual Domain</h3>
 					<p>
 						Morals, values and beliefs – spiritual development, personality
@@ -31,7 +37,7 @@ const Body = () => {
 						decision-making and understanding of moral norms.
 					</p>
 				</div>
-				<div className="domeach">
+				<div className="domeach" data-aos="fade-up">
 					<h3>Socio-emotional Domain</h3>
 					<p>
 						Social development – learning to communicate, share, take turns,
@@ -41,7 +47,7 @@ const Body = () => {
 						emotions and developing emotional intelligence
 					</p>
 				</div>
-				<div className="domeach">
+				<div className="domeach" data-aos="fade-up">
 					<h3>Skills</h3>
 					<p>
 						Skill-Building– In this digitally-driven world most of the job
@@ -50,7 +56,7 @@ const Body = () => {
 						in a world with increasing complexities
 					</p>
 				</div>
-				<div className="domeach">
+				<div className="domeach" data-aos="fade-up">
 					<h3>Child Protection</h3>
 					<p>
 						No matter the circumstance, every child has the right to be

@@ -1,0 +1,33 @@
+.animation img {
+	width: 95%;
+	margin: 10px;
+}
+
+.createphoto {
+	width: 350px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.photoformItem {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.pictureup {
+	margin-right: 40px;
+}
+
+.photoBtn {
+	background-color: maroon;
+	border: none;
+	padding: 5px;
+	width: 150px;
+	border-radius: 5px;
+	margin: 0 auto;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+}

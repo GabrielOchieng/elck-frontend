@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./testimonials.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Testimonials = () => {
+	useEffect(() => {
+		AOS.init({ duration: 3000 });
+	}, []);
+
 	return (
 		<div className="containtest">
 			<div className="testtitle">
 				<h1>TESTIMONIALS</h1>
 			</div>
 			<div className="testitems">
-				<div className="testitem">
+				<div className="testitem" data-aos="fade-right">
 					<img src="./images/George.jpeg" alt="" />
 					<div className="testtext">
 						<p>
@@ -21,7 +27,7 @@ const Testimonials = () => {
 						</h4>
 					</div>
 				</div>
-				<div className="testitem">
+				<div className="testitem" data-aos="fade-left">
 					<img src="./images/Eve.jpeg" alt="" />
 					<div className="testtext">
 						<p>
@@ -34,7 +40,7 @@ const Testimonials = () => {
 						</h4>
 					</div>
 				</div>
-				<div className="testitem">
+				<div className="testitem" data-aos="fade-right">
 					<img src="./images/Gabriel.jpeg" alt="" />
 					<div className="testtext">
 						<p>

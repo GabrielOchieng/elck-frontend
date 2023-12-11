@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./aboutlast.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const AboutLast = () => {
+	useEffect(() => {
+		AOS.init({ duration: 2000 });
+	}, []);
+
 	return (
 		<div
 			style={{
@@ -11,6 +17,7 @@ const AboutLast = () => {
 				width: "100%",
 			}}
 			className="aboutlast"
+			data-aos="fade-up"
 		>
 			<h1>A CLOSER LOOK AT THE WORK WITH OUR CHILDREN</h1>
 
