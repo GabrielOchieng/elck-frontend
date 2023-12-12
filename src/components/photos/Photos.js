@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { addPhoto } from "../../redux/PhotosSlice";
+import { addPhoto } from "../../redux/PhotoSlice";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./photos.css";
@@ -8,21 +8,21 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Photos = () => {
-	const [photo, setPhoto] = useState("");
+	const [image, setImage] = useState("");
 	const [description, setDescription] = useState("");
 
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
-	const onChangePhoto = (event) => {
+	const onChangeImage = (event) => {
 		console.log(event.target.files[0]);
-		setPhoto(event.target.files[0]);
+		setImage(event.target.files[0]);
 	};
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		const formData = new FormData();
-		formData.append("photo", photo);
+		formData.append("image", image);
 		formData.append("description", description);
 
 		axios
@@ -37,9 +37,9 @@ const Photos = () => {
 				dispatch(addPhoto(res.data));
 				console.log(res.data);
 			})
-			.catch((err) => console.log(err));
+			.catch((err) => console.log(err.message));
 
-		navigate("/photos");
+		// navigate("/photospage");
 	};
 
 	useEffect(() => {
@@ -60,9 +60,9 @@ const Photos = () => {
 						</label>
 						<input
 							type="file"
-							name="photo"
+							filename="photo"
 							// value={profilepic}
-							onChange={onChangePhoto}
+							onChange={onChangeImage}
 						/>
 					</div>
 

@@ -43,10 +43,7 @@ const Update = () => {
 		formData.append("pdf", pdf);
 
 		axios
-			.put(
-				"https://elck-cdc-website-api.vercel.app/participants/" + id,
-				formData
-			)
+			.put("https://elck-cdc-api.onrender.com/participants/" + id, formData)
 			.then((res) => {
 				dispatch(
 					updateParticipant({
@@ -57,7 +54,7 @@ const Update = () => {
 			})
 			.catch((err) => console.log(err));
 
-		navigate("/participants");
+		navigate("/participantspage");
 	};
 
 	return (

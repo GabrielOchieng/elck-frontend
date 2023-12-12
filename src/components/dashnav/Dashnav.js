@@ -30,11 +30,11 @@ const Dashnav = () => {
 			const { status, user } = data;
 			setUsername(user);
 
-			return status
-				? //NAVIGATION NOT WORKING WELL ON SIGN IN
-				  // 	return status
-				  toast({ position: "top-right" })
-				: (removeCookie("token"), navigate("/dashboard"));
+			// return status
+			// 	? //NAVIGATION NOT WORKING WELL ON SIGN IN
+			// 	  // 	return status
+			// 	  toast({ position: "top-right" })
+			// 	: (removeCookie("token"), navigate("/dashboard"));
 		};
 		verifyCookie();
 	}, [cookies, navigate, removeCookie]);
@@ -54,7 +54,7 @@ const Dashnav = () => {
 			<div className="segmentsdash">
 				<ul className="seguldash">
 					<li className="navsegdash">
-						<Link to={"/participants"}>PARTICIPANTS</Link>
+						<Link to={"/participantspage"}>PARTICIPANTS</Link>
 					</li>
 					<li className="navsegdash">
 						<Link to={"/"}>STAFF</Link>
@@ -64,7 +64,7 @@ const Dashnav = () => {
 					</li>
 
 					<li className="navsegdash">
-						<Link to={"/photos"}>PHOTOS</Link>
+						<Link to={"/photospage"}>PHOTOS</Link>
 					</li>
 				</ul>
 			</div>
@@ -88,7 +88,7 @@ const Dashnav = () => {
 							<div className="segmentsdash">
 								<ul className="segulrdash">
 									<li className="navsegdash">
-										<Link to={"/participants"}>PARTICIPANTS</Link>
+										<Link to={"/participantspage"}>PARTICIPANTS</Link>
 									</li>
 									<li className="navsegdash">
 										<Link to={"/"}>STAFF</Link>
@@ -98,7 +98,7 @@ const Dashnav = () => {
 									</li>
 
 									<li className="navsegdash">
-										<Link to={"/photos"}>PHOTOS</Link>
+										<Link to={"/photospage"}>PHOTOS</Link>
 									</li>
 								</ul>
 							</div>

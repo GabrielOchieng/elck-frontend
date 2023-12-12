@@ -28,10 +28,10 @@ function App() {
 				<Route path="/donate" element={<DonatePage />} />
 				<Route path="/signin" element={<SigninPage />} />
 				<Route path="/register" element={<RegisterPage />} />
-				<Route path="/participants" element={<ParticipantsPage />} />
+				<Route path="/participantspage" element={<ParticipantsPage />} />
 				<Route path="/createParticipant" element={<Create />} />
 				<Route path="/editParticipant/:id" element={<EditParticipant />} />
-				<Route path="/photos" element={<PhotosPage />} />
+				<Route path="/photospage" element={<PhotosPage />} />
 			</Routes>
 			<Footer />
 		</>

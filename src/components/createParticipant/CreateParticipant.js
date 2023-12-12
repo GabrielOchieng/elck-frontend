@@ -47,9 +47,9 @@ const CreateParticipant = () => {
 				dispatch(addParticipant(res.data));
 				console.log(res.data);
 			})
-			.catch((err) => console.log(err.message));
+			.catch((err) => console.log(err.res));
 
-		navigate("/participants");
+		navigate("/participantspage");
 	};
 	return (
 		<div>

@@ -34,8 +34,8 @@ const participantSlice = createSlice({
 				participantno: action.payload.participantno,
 				username: action.payload.username,
 				age: action.payload.age,
-				caregiver: action.payload.caregiver,
 				residence: action.payload.residence,
+				caregiver: action.payload.caregiver,
 				contact: action.payload.contact,
 				pdf: action.payload.pdf,
 			};

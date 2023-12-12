@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const photosSlice = createSlice({
+const photoSlice = createSlice({
 	name: "photos",
 	initialState: {
 		photos: [],
@@ -10,7 +10,7 @@ const photosSlice = createSlice({
 			state.photos = action.payload.data.map((photo) => {
 				return {
 					id: photo._id,
-					photo: photo.photo,
+					image: photo.image,
 					description: photo.description,
 				};
 			});
@@ -22,7 +22,7 @@ const photosSlice = createSlice({
 			const index = state.photos.findIndex((i) => i.id === action.payload.id);
 			state.photos[index] = {
 				id: action.payload.id,
-				photo: action.payload.photo,
+				image: action.payload.image,
 				description: action.payload.description,
 			};
 		},
@@ -34,5 +34,5 @@ const photosSlice = createSlice({
 });
 
 export const { addPhoto, getPhoto, updatePhoto, deletePhoto } =
-	photosSlice.actions;
-export default photosSlice.reducer;
+	photoSlice.actions;
+export default photoSlice.reducer;
