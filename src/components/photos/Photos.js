@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { addPhoto } from "../../redux/PhotoSlice";
+import { addPhoto, getPhoto, deletePhoto } from "../../redux/PhotoSlice";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./photos.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -11,6 +11,7 @@ const Photos = () => {
 	const [image, setImage] = useState("");
 	const [description, setDescription] = useState("");
 
+	const photos = useSelector((state) => state.photos.photos);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
 
@@ -27,8 +28,8 @@ const Photos = () => {
 
 		axios
 			.post(
-				"https://elck-cdc-api.onrender.com/photos",
-				// "http://localhost:4000/photos",
+				// "https://elck-cdc-api.onrender.com/photos",
+				"http://localhost:4000/photos",
 
 				formData
 			)
@@ -41,6 +42,36 @@ const Photos = () => {
 
 		// navigate("/photospage");
 	};
+
+	const handleDelete = (id) => {
+		axios
+			.delete(
+				"https://elck-cdc-api.onrender.com/photos/" + id
+				// "http://localhost:4000/photos/" + id
+			)
+			.then((res) => {
+				dispatch(deletePhoto({ id }));
+				console.log(res);
+			})
+			.catch((err) => console.log(err));
+	};
+
+	useEffect(() => {
+		const fetchPhotos = async () => {
+			try {
+				const response = await axios.get(
+					"https://elck-cdc-api.onrender.com/photos"
+				);
+
+				// http://localhost:4000/participants
+
+				dispatch(getPhoto(response.data));
+			} catch (err) {
+				console.log(err);
+			}
+		};
+		fetchPhotos();
+	}, []);
 
 	useEffect(() => {
 		AOS.init({ duration: 2000 });
@@ -82,59 +113,24 @@ const Photos = () => {
 				</form>
 			</div>
 			<div className="photosCont">
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-down">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-down">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-down">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-right">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-right">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-right">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
-				</div>
-				<div className="animation" data-aos="fade-up">
-					<img src="./images/satellite.jpeg" alt="" />
+				<div className="animationcont" data-aos="fade-up">
+					{photos.map((photo) => {
+						return (
+							<div className="animation" data-aos="fade-down">
+								<img src={`/photosdes/${photo.image}`} alt="image" />
+
+								<div className="btnp">
+									<p>{photo.description}</p>
+									<button
+										onClick={() => handleDelete(photo.id)}
+										className="deletephotobtn"
+									>
+										Delete Photo
+									</button>
+								</div>
+							</div>
+						);
+					})}
 				</div>
 			</div>
 		</div>
