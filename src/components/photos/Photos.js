@@ -8,12 +8,23 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Photos = () => {
+	const [modal, setModal] = useState(false);
 	const [image, setImage] = useState("");
 	const [description, setDescription] = useState("");
 
 	const photos = useSelector((state) => state.photos.photos);
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
+
+	const toggleModal = () => {
+		setModal(!modal);
+	};
+
+	if (modal) {
+		document.body.classList.add("active-modal");
+	} else {
+		document.body.classList.remove("active-modal");
+	}
 
 	const onChangeImage = (event) => {
 		console.log(event.target.files[0]);
@@ -79,39 +90,49 @@ const Photos = () => {
 
 	return (
 		<div>
-			<div className="createphoto">
-				<form
-					className="formPhoto"
-					onSubmit={handleSubmit}
-					encType="multipart/form-data"
-				>
-					<div className="photoformItem ">
-						<label className="pictureup" htmlFor="photo">
-							Photo:
-						</label>
-						<input
-							type="file"
-							filename="photo"
-							// value={profilepic}
-							onChange={onChangeImage}
-						/>
-					</div>
-
-					<div className="photoformItem">
-						<label htmlFor="pdf">Description:</label>
-						<textarea
-							type="text"
-							name="description"
-							value={description}
-							onChange={(e) => setDescription(e.target.value)}
-						/>
-					</div>
-
-					<button type="submit" className="photoBtn">
-						Add
+			{!modal && (
+				<div className="addphoto">
+					<button className="photoadd" onClick={toggleModal}>
+						Add Photo
 					</button>
-				</form>
-			</div>
+				</div>
+			)}
+
+			{modal && (
+				<div className="createphoto">
+					<form
+						className="formPhoto"
+						onSubmit={handleSubmit}
+						encType="multipart/form-data"
+					>
+						<div className="photoformItem ">
+							<label className="pictureup" htmlFor="photo">
+								Photo:
+							</label>
+							<input
+								type="file"
+								filename="photo"
+								// value={profilepic}
+								onChange={onChangeImage}
+							/>
+						</div>
+
+						<div className="photoformItem">
+							<label htmlFor="pdf">Description:</label>
+							<textarea
+								type="text"
+								name="description"
+								value={description}
+								onChange={(e) => setDescription(e.target.value)}
+							/>
+						</div>
+
+						<button type="submit" className="photoBtn" onClick={toggleModal}>
+							Add
+						</button>
+					</form>
+				</div>
+			)}
 			<div className="photosCont">
 				<div className="animationcont" data-aos="fade-up">
 					{photos.map((photo) => {
