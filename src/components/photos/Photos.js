@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { addPhoto, getPhoto, deletePhoto } from "../../redux/PhotoSlice";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -118,7 +118,6 @@ const Photos = () => {
 						className="formPhoto"
 						onSubmit={handleSubmit}
 						encType="multipart/form-data"
-						ref={menuRef}
 					>
 						<div className="photoformItem ">
 							<label className="pictureup" htmlFor="photo">
