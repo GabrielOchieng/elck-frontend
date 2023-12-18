@@ -30,7 +30,8 @@ const Dashnav = () => {
 			const { status, user } = data;
 			setUsername(user);
 
-			// return status
+			return status;
+
 			// 	? //NAVIGATION NOT WORKING WELL ON SIGN IN
 			// 	  // 	return status
 			// 	  toast({ position: "top-right" })

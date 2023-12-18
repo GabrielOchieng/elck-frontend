@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { addPhoto, getPhoto, deletePhoto } from "../../redux/PhotoSlice";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -26,6 +26,21 @@ const Photos = () => {
 		document.body.classList.remove("active-modal");
 	}
 
+	// let menuRef = useRef();
+	// console.log(menuRef);
+	// useEffect(() => {
+	// 	const formRef = menuRef.current;
+	// 	console.log(formRef);
+	// 	// 	let handler = (event) => {
+	// 	// 		if (menuRef.current.contains(event.target)) {
+	// 	// 			setModal(false);
+	// 	// 		}
+	// 	// 	};
+
+	// 	// 	document.addEventListener("mousedown", handler);
+	// 	//
+	// }, []);
+
 	const onChangeImage = (event) => {
 		console.log(event.target.files[0]);
 		setImage(event.target.files[0]);
@@ -39,8 +54,8 @@ const Photos = () => {
 
 		axios
 			.post(
-				// "https://elck-cdc-api.onrender.com/photos",
-				"http://localhost:4000/photos",
+				"https://elck-cdc-api.onrender.com/photos",
+				// "http://localhost:4000/photos",
 
 				formData
 			)
@@ -72,9 +87,8 @@ const Photos = () => {
 			try {
 				const response = await axios.get(
 					"https://elck-cdc-api.onrender.com/photos"
+					// "http://localhost:4000/photos"
 				);
-
-				// http://localhost:4000/participants
 
 				dispatch(getPhoto(response.data));
 			} catch (err) {
@@ -104,6 +118,7 @@ const Photos = () => {
 						className="formPhoto"
 						onSubmit={handleSubmit}
 						encType="multipart/form-data"
+						ref={menuRef}
 					>
 						<div className="photoformItem ">
 							<label className="pictureup" htmlFor="photo">

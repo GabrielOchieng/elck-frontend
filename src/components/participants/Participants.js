@@ -28,10 +28,9 @@ const Participants = () => {
 		const fetchParticipants = async () => {
 			try {
 				const response = await axios.get(
-					"https://elck-cdc-api.onrender.com/participants"
+					"http://localhost:4000/participants"
+					// "https://elck-cdc-api.onrender.com/participants"
 				);
-
-				// http://localhost:4000/participants
 
 				dispatch(getParticipant(response.data));
 			} catch (err) {
