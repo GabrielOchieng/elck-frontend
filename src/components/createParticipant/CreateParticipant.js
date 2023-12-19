@@ -49,7 +49,7 @@ const CreateParticipant = () => {
 			})
 			.catch((err) => console.log(err.res));
 
-		navigate("/participantspage");
+		navigate("/createParticipant");
 	};
 	return (
 		<div>

@@ -16,7 +16,10 @@ const Participants = () => {
 
 	const handleDelete = (id) => {
 		axios
-			.delete("https://elck-cdc-api.onrender.com/participants/" + id)
+			.delete(
+				// "http://localhost:4000/participants/" + id)
+				"https://elck-cdc-api.onrender.com/participants/" + id
+			)
 			.then((res) => {
 				dispatch(deleteParticipant({ id }));
 				console.log(res);
@@ -28,8 +31,8 @@ const Participants = () => {
 		const fetchParticipants = async () => {
 			try {
 				const response = await axios.get(
-					"http://localhost:4000/participants"
-					// "https://elck-cdc-api.onrender.com/participants"
+					// "http://localhost:4000/participants"
+					"https://elck-cdc-api.onrender.com/participants"
 				);
 
 				dispatch(getParticipant(response.data));

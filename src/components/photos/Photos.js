@@ -54,8 +54,8 @@ const Photos = () => {
 
 		axios
 			.post(
-				"https://elck-cdc-api.onrender.com/photos",
-				// "http://localhost:4000/photos",
+				// "https://elck-cdc-api.onrender.com/photos",
+				"http://localhost:4000/photos",
 
 				formData
 			)
