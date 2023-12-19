@@ -7,6 +7,7 @@ import {
 	getParticipant,
 } from "../../redux/ParticipantSlice";
 import { Link } from "react-router-dom";
+import { BsSearch } from "react-icons/bs";
 
 const Participants = () => {
 	const [search, setSearch] = useState("");
@@ -46,6 +47,7 @@ const Participants = () => {
 	return (
 		<div className="mainP">
 			<div className="search">
+				<BsSearch className="searchicon" />
 				<input
 					type="text"
 					onChange={(e) => setSearch(e.target.value)}
@@ -58,7 +60,7 @@ const Participants = () => {
 			</div>
 
 			<div className="items">
-				<div>
+				<div className="participantscont">
 					{participants
 						.filter((item) => {
 							return search.toLowerCase() === ""
@@ -67,7 +69,7 @@ const Participants = () => {
 						})
 						.map((participant) => {
 							return (
-								<div key={participant.id} className="participantss">
+								<div key={participant.id} className="participants">
 									<div className="item">
 										<div className="subItem profile">
 											<img
@@ -76,10 +78,12 @@ const Participants = () => {
 											/>
 
 											<p>
-												<span></span>Name: {participant.username}
+												<span className="identifier">Name:</span>{" "}
+												{participant.username}
 											</p>
 											<p>
-												<span></span>KENo: {participant.participantno}
+												<span className="identifier">KENo:</span>{" "}
+												{participant.participantno}
 											</p>
 										</div>
 										<div className="details subItem">

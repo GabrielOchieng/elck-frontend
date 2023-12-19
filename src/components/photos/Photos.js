@@ -151,7 +151,7 @@ const Photos = () => {
 				<div className="animationcont" data-aos="fade-up">
 					{photos.map((photo) => {
 						return (
-							<div className="animation" data-aos="fade-down">
+							<div key={photo.id} className="animation" data-aos="fade-down">
 								<img src={`/photosdes/${photo.image}`} alt="image" />
 
 								<div className="btnp">
