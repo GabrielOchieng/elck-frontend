@@ -1,5 +1,7 @@
 import axios from "axios";
 import "./participants.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -44,6 +46,10 @@ const Participants = () => {
 		fetchParticipants();
 	}, []);
 
+	useEffect(() => {
+		AOS.init({ duration: 2000 });
+	}, []);
+
 	return (
 		<div className="mainP">
 			<div className="search">
@@ -60,7 +66,7 @@ const Participants = () => {
 			</div>
 
 			<div className="items">
-				<div className="participantscont">
+				<div className="participantscont" data-aos="fade-down">
 					{participants
 						.filter((item) => {
 							return search.toLowerCase() === ""
