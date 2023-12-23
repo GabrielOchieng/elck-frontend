@@ -52,6 +52,11 @@ form {
 	border: none;
 	border-radius: 5px;
 }
+.loader {
+	width: 500px;
+	height: 100%;
+	text-align: center;
+}
 
 /* RESPONSIVENESS */
 

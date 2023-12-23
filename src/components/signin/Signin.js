@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+import FadeLoader from "react-spinners/FadeLoader";
 import "./signin.css";
 
 const Signin = () => {
@@ -10,6 +11,7 @@ const Signin = () => {
 		email: "",
 		password: "",
 	});
+	const [loading, setLoading] = useState(false);
 	const { email, password } = inputValue;
 
 	const handleOnChange = (e) => {
@@ -34,7 +36,9 @@ const Signin = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
 		try {
+			setLoading(true);
 			const { data } = await axios.post(
 				"https://elck-cdc-api.onrender.com/users/login",
 				{
@@ -42,6 +46,7 @@ const Signin = () => {
 				},
 				{ withCredentials: true }
 			);
+
 			console.log(data);
 
 			const { success, message } = data;
@@ -49,8 +54,10 @@ const Signin = () => {
 				handleSuccess(message);
 				setTimeout(() => {
 					navigate("/dashboard");
-				}, 1000);
+					setLoading(false);
+				}, 5000);
 			} else {
+				setLoading(false);
 				handleError(message);
 			}
 		} catch (error) {
@@ -64,42 +71,55 @@ const Signin = () => {
 	};
 
 	return (
-		<div className="login">
-			<h2>Sign in</h2>
-			<div className="loginForm">
-				<form onSubmit={handleSubmit}>
-					<div className="loginItem">
-						<label htmlFor="email">Email:</label>
-						<input
-							type="email"
-							name="email"
-							value={email}
-							placeholder="Enter your email address"
-							onChange={handleOnChange}
-						/>
+		<div>
+			{loading ? (
+				<div className="loader">
+					<FadeLoader
+						loading={loading}
+						size={150}
+						aria-label="Loading Spinner"
+						data-testid="loader"
+					/>
+				</div>
+			) : (
+				<div className="login">
+					<h2>Sign in</h2>
+					<div className="loginForm">
+						<form onSubmit={handleSubmit}>
+							<div className="loginItem">
+								<label htmlFor="email">Email:</label>
+								<input
+									type="email"
+									name="email"
+									value={email}
+									placeholder="Enter your email address"
+									onChange={handleOnChange}
+								/>
+							</div>
+							<div className="loginItem">
+								<label htmlFor="password">Password:</label>
+								<input
+									type="password"
+									name="password"
+									value={password}
+									placeholder="Enter your password"
+									onChange={handleOnChange}
+								/>
+							</div>
+							<div className="loginItem">
+								<Link to={"/"}>Forgot your username/password?</Link>
+							</div>
+							<div className="buttons">
+								<button type="submit">Login</button>
+								<Link to={"/register"}>
+									<button>New User?</button>
+								</Link>
+							</div>
+						</form>
+						<ToastContainer />
 					</div>
-					<div className="loginItem">
-						<label htmlFor="password">Password:</label>
-						<input
-							type="password"
-							name="password"
-							value={password}
-							placeholder="Enter your password"
-							onChange={handleOnChange}
-						/>
-					</div>
-					<div className="loginItem">
-						<Link to={"/"}>Forgot your username/password?</Link>
-					</div>
-					<div className="buttons">
-						<button type="submit">Login</button>
-						<Link to={"/register"}>
-							<button>New User?</button>
-						</Link>
-					</div>
-				</form>
-				<ToastContainer />
-			</div>
+				</div>
+			)}
 		</div>
 	);
 };
