@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { BsLinkedin, BsXLg, BsFacebook, BsGithub } from "react-icons/bs";
+import { BsLinkedin, BsFacebook, BsGithub, BsTwitterX } from "react-icons/bs";
 import "./footer.css";
 import emailjs, { send } from "@emailjs/browser";
 
@@ -102,7 +102,7 @@ const Footer = () => {
 									<BsLinkedin />
 								</li>
 								<li>
-									<BsXLg />
+									<BsTwitterX />
 								</li>
 								<li>
 									<BsFacebook />
@@ -124,7 +124,12 @@ const Footer = () => {
 							</a>
 						</li>
 						<li>
-							<BsXLg />
+							<a
+								href="https://x.com/TechieGabriel?t=D8iyVIeZnEVOlPdImbJ2HQ&s=09"
+								target="blank"
+							>
+								<BsTwitterX />
+							</a>
 						</li>
 						<li>
 							<a href="https://github.com/GabrielOchieng" target="blank">
