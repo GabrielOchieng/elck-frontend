@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
 import { BsLinkedin, BsXLg, BsFacebook, BsGithub } from "react-icons/bs";
 import "./footer.css";
+import emailjs, { send } from "@emailjs/browser";
 
 const Footer = () => {
+	const form = useRef();
+
+	const sendEmail = (e) => {
+		e.preventDefault();
+
+		emailjs
+			.sendForm(
+				"service_24lvd9i",
+				"template_ox65d72",
+				form.current,
+				"WrLNFNzq0IHmm7g4_"
+			)
+			.then(
+				(result) => {
+					console.log(result.text);
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+		e.target.reset();
+	};
+
 	return (
 		<div className="containfooter">
 			<div className="footer">
@@ -47,19 +71,29 @@ const Footer = () => {
 					<div className="footerreach">
 						<div className="footerform">
 							<h2>Message</h2>
-							<form>
-								<input type="text" placeholder="Firstname" />
-								<input type="text" id="lastname" placeholder="Lastname" />
-								<input type="text" id="email" placeholder="Email" />
+							<form ref={form} onSubmit={sendEmail}>
+								<input type="text" name="firstname" placeholder="Firstname" />
+								<input
+									type="text"
+									name="lastname"
+									id="lastname"
+									placeholder="Lastname"
+								/>
+								<input
+									type="text"
+									name="email"
+									id="email"
+									placeholder="Email"
+								/>
 								<textarea
-									name=""
+									name="message"
 									id=""
 									cols="30"
 									rows="5"
 									placeholder="Message..."
 								></textarea>
+								<button type="submit">Submit</button>
 							</form>
-							<button>Submit</button>
 						</div>
 						<div className="footersocials">
 							<h2>Follow Us</h2>

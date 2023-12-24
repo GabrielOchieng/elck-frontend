@@ -82,7 +82,7 @@
 	color: brown;
 	font-size: 20px;
 	font-weight: 700;
-	margin-left: 20px;
+	/* margin-left: 20px; */
 }
 
 .footersocials {
@@ -164,7 +164,7 @@
 
 	.footerform button {
 		width: 250px;
-		margin: 17px;
+		/* margin: 17px; */
 	}
 
 	.footersocials {
