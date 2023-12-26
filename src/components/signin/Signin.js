@@ -52,10 +52,9 @@ const Signin = () => {
 			const { success, message } = data;
 			if (success) {
 				handleSuccess(message);
-				setTimeout(() => {
-					navigate("/dashboard");
-					setLoading(false);
-				}, 5000);
+
+				navigate("/dashboard");
+				setLoading(false);
 			} else {
 				setLoading(false);
 				handleError(message);
@@ -107,7 +106,7 @@ const Signin = () => {
 								/>
 							</div>
 							<div className="loginItem">
-								<Link to={"/"}>Forgot your username/password?</Link>
+								<Link to={"/register"}>Forgot your username/password?</Link>
 							</div>
 							<div className="buttons">
 								<button type="submit">Login</button>
