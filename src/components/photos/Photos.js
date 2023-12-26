@@ -9,6 +9,7 @@ import axios from "axios";
 
 const Photos = () => {
 	const [modal, setModal] = useState(false);
+	const [deleteModal, setDeleteModal] = useState(false);
 	const [image, setImage] = useState("");
 	const [description, setDescription] = useState("");
 
@@ -26,20 +27,9 @@ const Photos = () => {
 		document.body.classList.remove("active-modal");
 	}
 
-	// let menuRef = useRef();
-	// console.log(menuRef);
-	// useEffect(() => {
-	// 	const formRef = menuRef.current;
-	// 	console.log(formRef);
-	// 	// 	let handler = (event) => {
-	// 	// 		if (menuRef.current.contains(event.target)) {
-	// 	// 			setModal(false);
-	// 	// 		}
-	// 	// 	};
-
-	// 	// 	document.addEventListener("mousedown", handler);
-	// 	//
-	// }, []);
+	const toggleDeleteModal = () => {
+		setDeleteModal(!deleteModal);
+	};
 
 	const onChangeImage = (event) => {
 		console.log(event.target.files[0]);
@@ -156,12 +146,29 @@ const Photos = () => {
 
 								<div className="btnp">
 									<p>{photo.description}</p>
-									<button
-										onClick={() => handleDelete(photo.id)}
-										className="deletephotobtn"
-									>
-										Delete Photo
-									</button>
+
+									{!deleteModal && (
+										<button
+											onClick={toggleDeleteModal}
+											className="deletephotobtn"
+										>
+											Delete Photo
+										</button>
+									)}
+									{deleteModal && (
+										<div className="deleteModal">
+											<p>Are you sure you want to delete this photo?!!!</p>
+											<button
+												className="yesdelete"
+												onClick={() => handleDelete(photo.id)}
+											>
+												Yes !
+											</button>
+											<button className="nodelete" onClick={toggleDeleteModal}>
+												No
+											</button>
+										</div>
+									)}
 								</div>
 							</div>
 						);

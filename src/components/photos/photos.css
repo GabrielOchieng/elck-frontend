@@ -85,3 +85,37 @@ body.active-modal {
 	color: white;
 	margin: 20px;
 }
+
+photosCont {
+	position: relative;
+}
+
+.deleteModal {
+	width: 60%;
+	padding: 5px;
+	font-size: 20px;
+	position: absolute;
+	bottom: 60px;
+	background-color: white;
+}
+
+.deleteModal p {
+	color: black;
+}
+
+.deleteModal button {
+	margin-right: 30px;
+	padding: 5px 10px;
+	border: none;
+	font-weight: bold;
+	border-radius: 5px;
+	color: white;
+}
+
+.yesdelete {
+	background-color: red;
+}
+
+.nodelete {
+	background-color: green;
+}

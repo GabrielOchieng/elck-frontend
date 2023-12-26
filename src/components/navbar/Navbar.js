@@ -62,7 +62,7 @@ const Navbar = () => {
 												to="https://rarieda-satellite-cdc-gabrielochieng.vercel.app/"
 												target="blank"
 											>
-												Our Satellite
+												Satellite
 											</Link>
 										</li>
 
