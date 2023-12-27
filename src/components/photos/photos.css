@@ -119,3 +119,7 @@ photosCont {
 .nodelete {
 	background-color: green;
 }
+
+.upscroll {
+	margin: 20px 30px;
+}

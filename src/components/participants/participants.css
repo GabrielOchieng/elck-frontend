@@ -25,6 +25,13 @@
 	font-size: 20px;
 }
 
+.new {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 90px;
+}
+
 .new a {
 	text-decoration: none;
 	margin: 10px;
@@ -102,6 +109,41 @@
 	border-radius: 5px;
 }
 
+.deletepaModal {
+	/* width: 60%; */
+	padding: 5px;
+	font-size: 16px;
+
+	bottom: 60px;
+	background-color: white;
+}
+
+.deletepaModal p {
+	color: black;
+}
+
+.deletepaModal .buttonsd {
+	display: flex;
+	justify-content: space-between;
+}
+
+.deletepaModal button {
+	margin-right: 30px;
+	padding: 5px;
+	border: none;
+	font-weight: bold;
+	border-radius: 5px;
+	color: white;
+}
+
+.delete {
+	background-color: red;
+}
+
+.nodeletepa {
+	background-color: maroon;
+}
+
 @media (max-width: 768px) {
 	.item {
 		display: flex;
@@ -119,6 +161,9 @@
 		flex-direction: row;
 
 		justify-content: space-between;
+	}
+	.new {
+		padding: 10px 60px;
 	}
 }
 @media (max-width: 480px) {

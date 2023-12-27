@@ -1,0 +1,18 @@
+.upicon {
+	background-color: greenyellow;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	animation: movebtn 3s ease-in-out infinite;
+	transition: all 0.5s ease-in-out;
+}
+
+.upicon:hover {
+	animation: none;
+	background: #fff;
+	color: maroon;
+	border: 2px solid #551b54;
+}

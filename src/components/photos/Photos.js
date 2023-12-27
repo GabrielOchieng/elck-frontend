@@ -6,6 +6,7 @@ import "./photos.css";
 import { useDispatch, useSelector } from "react-redux";
 
 import axios from "axios";
+import ScrolltoTop from "../scrolltoTop/ScrolltoTop";
 
 const Photos = () => {
 	const [modal, setModal] = useState(false);
@@ -176,6 +177,9 @@ const Photos = () => {
 						);
 					})}
 				</div>
+			</div>
+			<div className="upscroll">
+				<ScrolltoTop />
 			</div>
 		</div>
 	);

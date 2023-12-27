@@ -10,6 +10,7 @@ import {
 } from "../../redux/ParticipantSlice";
 import { Link } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
+import ScrolltoTop from "../scrolltoTop/ScrolltoTop";
 
 const Participants = () => {
 	const [search, setSearch] = useState("");
@@ -134,18 +135,20 @@ const Participants = () => {
 													<p>
 														Are you sure you want to delete this participant?!!!
 													</p>
-													<button
-														className="delete"
-														onClick={() => handleDelete(participant.id)}
-													>
-														YES !
-													</button>
-													<button
-														className="nodelete"
-														onClick={toggleDeleteModal}
-													>
-														No
-													</button>
+													<div className="buttonsd">
+														<button
+															className="delete"
+															onClick={() => handleDelete(participant.id)}
+														>
+															YES !
+														</button>
+														<button
+															className="nodeletepa"
+															onClick={toggleDeleteModal}
+														>
+															No
+														</button>
+													</div>
 												</div>
 											)}
 										</div>
@@ -157,6 +160,7 @@ const Participants = () => {
 			</div>
 			<div className="new">
 				<Link to="/createParticipant">Create New Participant</Link>
+				<ScrolltoTop />
 			</div>
 		</div>
 	);
