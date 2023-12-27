@@ -13,9 +13,14 @@ import { BsSearch } from "react-icons/bs";
 
 const Participants = () => {
 	const [search, setSearch] = useState("");
+	const [deleteModal, setDeleteModal] = useState(false);
 
 	const dispatch = useDispatch();
 	const participants = useSelector((state) => state.participants.participants);
+
+	const toggleDeleteModal = () => {
+		setDeleteModal(!deleteModal);
+	};
 
 	const handleDelete = (id) => {
 		axios
@@ -80,7 +85,7 @@ const Participants = () => {
 										<div className="subItem profile">
 											<img
 												src={`/uploads/${participant.profilepic}`}
-												alt="Profile"
+												alt=" Participant profile picture"
 											/>
 
 											<p>
@@ -116,12 +121,33 @@ const Participants = () => {
 											<Link to={`/editParticipant/${participant.id}`}>
 												Edit Participant
 											</Link>
-											<button
-												onClick={() => handleDelete(participant.id)}
-												className="deletebtn"
-											>
-												Delete Participant
-											</button>
+											{!deleteModal && (
+												<button
+													onClick={toggleDeleteModal}
+													className="deletebtn"
+												>
+													Delete Participant
+												</button>
+											)}
+											{deleteModal && (
+												<div className="deletepaModal">
+													<p>
+														Are you sure you want to delete this participant?!!!
+													</p>
+													<button
+														className="delete"
+														onClick={() => handleDelete(participant.id)}
+													>
+														YES !
+													</button>
+													<button
+														className="nodelete"
+														onClick={toggleDeleteModal}
+													>
+														No
+													</button>
+												</div>
+											)}
 										</div>
 									</div>
 								</div>

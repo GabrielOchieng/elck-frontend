@@ -79,7 +79,7 @@
 @media (max-width: 768px) {
 	.containerNavdash {
 		display: flex;
-		align-items: start;
+		align-items: flex-start;
 		flex-direction: column;
 		gap: 15px;
 		padding: 10px 0;

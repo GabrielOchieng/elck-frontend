@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { addParticipant } from "../../redux/ParticipantSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./createParticipant.css";

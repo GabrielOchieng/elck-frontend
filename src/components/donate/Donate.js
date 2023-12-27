@@ -5,10 +5,14 @@ const Donate = () => {
 	return (
 		<div>
 			<div className="maindiv">
-				<img src="./images/donate.jpeg" alt="" className="donateimg" />
+				<img
+					src="./images/donate.jpeg"
+					alt="elck cdc participants"
+					className="donateimg"
+				/>
 				<div className="donatecont">
 					<h4>
-						YOUR DONATION CAN ENSURE <br /> A CHILD IS HOLISTICALLY DEVELOPED
+						YOUR DONATION WILL ENSURE <br /> A CHILD IS HOLISTICALLY DEVELOPED
 					</h4>
 					<h6>
 						DONATE ANY AMOUNT TO <br /> PAYBILL NUMBER{" "}

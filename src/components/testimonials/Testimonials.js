@@ -15,7 +15,7 @@ const Testimonials = () => {
 			</div>
 			<div className="testitems">
 				<div className="testitem" data-aos="fade-right">
-					<img src="./images/George.jpeg" alt="" />
+					<img src="./images/George.jpeg" alt="elck cdc staff" />
 					<div className="testtext">
 						<p>
 							"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
@@ -28,7 +28,7 @@ const Testimonials = () => {
 					</div>
 				</div>
 				<div className="testitem" data-aos="fade-left">
-					<img src="./images/Eve.jpeg" alt="" />
+					<img src="./images/Eve.jpeg" alt="elck cdc staff" />
 					<div className="testtext">
 						<p>
 							"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos
@@ -41,7 +41,7 @@ const Testimonials = () => {
 					</div>
 				</div>
 				<div className="testitem" data-aos="fade-right">
-					<img src="./images/Gabriel.jpeg" alt="" />
+					<img src="./images/Gabriel.jpeg" alt="elck cdc staff" />
 					<div className="testtext">
 						<p>
 							"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos

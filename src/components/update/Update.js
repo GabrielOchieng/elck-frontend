@@ -2,10 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import {
-	addParticipant,
-	updateParticipant,
-} from "../../redux/ParticipantSlice";
+import { updateParticipant } from "../../redux/ParticipantSlice";
 import "./update.css";
 
 const Update = () => {

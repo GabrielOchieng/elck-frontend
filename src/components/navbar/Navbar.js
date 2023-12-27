@@ -36,7 +36,7 @@ const Navbar = () => {
 							<Link to="/donate">Donate</Link>
 						</li>
 						<li className="navseg">
-							<Link to="/signin">Dashboard</Link>
+							<Link to="/signin">Welcome</Link>
 						</li>
 					</ul>
 					<div onClick={showNavbar} className="nav-btn">
@@ -70,7 +70,7 @@ const Navbar = () => {
 											<Link to="/donate">Donate</Link>
 										</li>
 										<li className="navseg">
-											<Link to="/signin">Dashboard</Link>
+											<Link to="/signin">Welcome</Link>
 										</li>
 									</ul>
 								</div>

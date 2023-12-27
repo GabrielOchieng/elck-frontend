@@ -149,7 +149,7 @@
 	}
 	.upperfooter {
 		display: flex;
-		align-items: start;
+		align-items: flex-start;
 		margin-left: 0;
 	}
 	.footerform input {
@@ -173,7 +173,7 @@
 
 	.footerreach {
 		display: flex;
-		align-items: start;
+		align-items: flex-start;
 		flex-direction: column;
 
 		margin-left: 0px;

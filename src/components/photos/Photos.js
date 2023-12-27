@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "./photos.css";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
 const Photos = () => {
@@ -15,7 +15,6 @@ const Photos = () => {
 
 	const photos = useSelector((state) => state.photos.photos);
 	const dispatch = useDispatch();
-	const navigate = useNavigate();
 
 	const toggleModal = () => {
 		setModal(!modal);
@@ -142,7 +141,10 @@ const Photos = () => {
 					{photos.map((photo) => {
 						return (
 							<div key={photo.id} className="animation" data-aos="fade-down">
-								<img src={`/photosdes/${photo.image}`} alt="image" />
+								<img
+									src={`/photosdes/${photo.image}`}
+									alt="Elck cdc activity image"
+								/>
 
 								<div className="btnp">
 									<p>{photo.description}</p>

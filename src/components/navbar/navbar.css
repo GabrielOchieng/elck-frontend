@@ -9,6 +9,7 @@
 
 .containerNav {
 	background-color: brown;
+	color: white;
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -38,7 +39,7 @@
 }
 .segul a {
 	margin: 30px;
-	color: black;
+	color: white;
 	text-decoration: none;
 	font-size: 16px;
 	font-weight: 500;

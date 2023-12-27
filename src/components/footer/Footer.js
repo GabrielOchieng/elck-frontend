@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { BsLinkedin, BsFacebook, BsGithub, BsTwitterX } from "react-icons/bs";
 import "./footer.css";
-import emailjs, { send } from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 const Footer = () => {
 	const form = useRef();

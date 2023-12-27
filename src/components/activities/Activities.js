@@ -16,7 +16,7 @@ const Activities = () => {
 				<a href="/">Our Impact</a>
 			</div>
 			<div className="activitiesdesc" data-aos="fade-up">
-				<img src="/images/Outdoor.jpeg" alt="" />
+				<img src="/images/Outdoor.jpeg" alt="elck cdc participants" />
 				<p>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
 					repudiandae quisquam quis nisi laudantium, alias rem fugiat voluptate
