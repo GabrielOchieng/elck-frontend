@@ -37,7 +37,7 @@ const Dashnav = () => {
 
 	const Logout = () => {
 		removeCookie("token");
-		navigate("/signin");
+		navigate("/");
 	};
 	return (
 		<div className="containerNavdash">
