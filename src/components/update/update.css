@@ -39,7 +39,7 @@
 	font-weight: bold;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1030px) {
 	.updateformTitle {
 		margin-bottom: 10px;
 	}
@@ -48,7 +48,8 @@
 		gap: 15px;
 	}
 	.updateformCont {
-		width: 80%;
+		width: 60%;
+		margin: 40px auto;
 	}
 	.updateformItem {
 		display: flex;
@@ -64,7 +65,13 @@
 		width: 250px;
 	}
 }
-@media (max-width: 480px) {
+
+@media (max-width: 768px) {
+	.updateformCont {
+		width: 80%;
+	}
+}
+@media (max-width: 640px) {
 	.updateformCont {
 		width: 90%;
 	}

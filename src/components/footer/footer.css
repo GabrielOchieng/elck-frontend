@@ -109,7 +109,7 @@
 	list-style: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 975px) {
 	.upperfooter {
 		display: flex;
 		flex-direction: column;
@@ -139,7 +139,7 @@
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 530px) {
 	.footer {
 		padding: 20px 10px;
 	}

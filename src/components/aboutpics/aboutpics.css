@@ -35,13 +35,13 @@
 }
 /* RESPONSIVENESS */
 
-@media (max-width: 768px) {
+@media (max-width: 975px) {
 	.aboutpics img {
 		width: 350px;
 		height: 230px;
 	}
 }
-@media (max-width: 480px) {
+@media (max-width: 700px) {
 	.aboutpics {
 		display: flex;
 		flex-direction: column;

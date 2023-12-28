@@ -51,7 +51,7 @@
 	text-decoration-thickness: 700;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 975px) {
 	.containerNav {
 		display: flex;
 		flex-direction: column;
@@ -59,7 +59,7 @@
 		height: auto;
 	}
 }
-@media (max-width: 480px) {
+@media (max-width: 626px) {
 	.containerNav {
 		padding: 5px;
 		display: flex;

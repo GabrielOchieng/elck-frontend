@@ -36,13 +36,13 @@
 
 /* RESPONSIVENESS */
 
-@media (max-width: 768px) {
+@media (max-width: 975px) {
 	.domeach {
 		width: 45%;
 		height: 250px;
 	}
 }
-@media (max-width: 480px) {
+@media (max-width: 700px) {
 	.domtexts {
 		display: flex;
 		flex-direction: column;

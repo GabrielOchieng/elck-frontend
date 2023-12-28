@@ -61,12 +61,17 @@ form {
 
 /* RESPONSIVENESS */
 
+@media (max-width: 1010px) {
+	.login {
+		width: 70%;
+	}
+}
 @media (max-width: 768px) {
 	.login {
 		width: 80%;
 	}
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
 	.login {
 		width: 80%;
 		font-size: 16px;
@@ -82,3 +87,19 @@ form {
 		flex-direction: column;
 	}
 }
+/* @media (max-width: 480px) {
+	.login {
+		width: 80%;
+		font-size: 16px;
+	}
+	.loginItem input {
+		width: 200px;
+		height: 30px;
+		padding: 5px;
+		font-size: 16px;
+	}
+	.buttons {
+		display: flex;
+		flex-direction: column;
+	}
+} */

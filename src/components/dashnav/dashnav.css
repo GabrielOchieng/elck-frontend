@@ -76,7 +76,7 @@
 	text-decoration-thickness: 700;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
 	.containerNavdash {
 		display: flex;
 		align-items: flex-start;
@@ -99,7 +99,7 @@
 		font-weight: 400;
 	}
 }
-@media (max-width: 480px) {
+@media (max-width: 700px) {
 	.containerNavdash {
 		padding: 5px;
 		display: flex;
