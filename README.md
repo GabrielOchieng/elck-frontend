@@ -6,8 +6,6 @@ A fully functional website project done using the MERN stack, having a landing p
 ## Description
 
 This project is the frontend of the ELCK CDC website, that is built with the MERN stack. It has a landing page displaying what the organization does, about it, how to contribute, its partners and the testimonials. You can also move to the welcome page where you'll be required to register as a user after which you will be able to sign in and view the participants with their details and the activities photos. Furthermore, you can Create, Update and Delete participants/photos as an admin and not as a normal user as these roles are restricted to those registered as admins of the database.
-## Screenshots
-blob:https://web.whatsapp.com/10a527c1-29e4-4f3c-b453-92a87fbde4d7
 
 
 
