@@ -1,54 +1,55 @@
 .aboutpics {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 20px;
-	place-items: center;
-	margin: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  place-items: center;
+  margin: 100px 0;
+  overflow-x: hidden;
 }
 
 .aboutpics img {
-	width: 500px;
-	height: 250px;
+  width: 500px;
+  height: 250px;
 }
 
 .aboutact1 {
-	position: relative;
+  position: relative;
 }
 .aboutact2 {
-	position: relative;
+  position: relative;
 }
 .aboutact3 {
-	position: relative;
+  position: relative;
 }
 .aboutact4 {
-	position: relative;
+  position: relative;
 }
 
 .aboutpics h2 {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	background-color: white;
-	color: brown;
-	font-size: 30px;
-	padding: 10px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: white;
+  color: brown;
+  font-size: 30px;
+  padding: 10px;
 }
 /* RESPONSIVENESS */
 
 @media (max-width: 975px) {
-	.aboutpics img {
-		width: 350px;
-		height: 230px;
-	}
+  .aboutpics img {
+    width: 350px;
+    height: 230px;
+  }
 }
 @media (max-width: 700px) {
-	.aboutpics {
-		display: flex;
-		flex-direction: column;
-	}
-	.aboutpics img {
-		width: 95%;
-		height: 200px;
-		margin-left: 5px;
-	}
+  .aboutpics {
+    display: flex;
+    flex-direction: column;
+  }
+  .aboutpics img {
+    width: 95%;
+    height: 200px;
+    margin-left: 5px;
+  }
 }

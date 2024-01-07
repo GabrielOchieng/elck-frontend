@@ -1,11 +1,12 @@
 .containerHed {
   background-color: brown;
   position: relative;
+  overflow-x: hidden;
 }
 
 .headerimg {
   padding: 0;
-  width: 100%;
+
   object-fit: cover;
   overflow: hidden;
 }
@@ -32,12 +33,30 @@
     left: 100px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 656px) {
+  .headerimg img {
+    width: 100%;
+  }
   .headertext {
     position: absolute;
     left: 5px;
     width: 75%;
     bottom: 10px;
     font-size: 14px;
+  }
+}
+@media (max-width: 340px) {
+  .headerimg img {
+    width: 100%;
+  }
+  .headertext {
+    position: absolute;
+
+    padding: 5px;
+    bottom: 0px;
+    right: -10px;
+    width: 65%;
+
+    font-size: 12px;
   }
 }
